@@ -15,13 +15,12 @@ public class booktrain {
 
         passengerBogies.remove("AC Chair");
 
-        System.out.println("\nPassenger Bogies after removal:");
+        System.out.println("Passenger Bogies after removal:");
         System.out.println(passengerBogies);
 
-        boolean exists = passengerBogies.contains("Sleeper");
-        System.out.println("\nDoes Sleeper bogie exist? " + exists);
+        System.out.println("Does Sleeper bogie exist? " + passengerBogies.contains("Sleeper"));
 
-        System.out.println("\nFinal Passenger Bogies List:");
+        System.out.println("Final Passenger Bogies List:");
         System.out.println(passengerBogies);
     }
 }
