@@ -1,26 +1,34 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class booktrain {
 
     public static void main(String[] args) {
 
-        ArrayList<String> passengerBogies = new ArrayList<>();
+        // Step 1: Create LinkedList for train consist
+        LinkedList<String> trainConsist = new LinkedList<>();
 
-        passengerBogies.add("Sleeper");
-        passengerBogies.add("AC Chair");
-        passengerBogies.add("First Class");
+        // Step 2: Add bogies in order
+        trainConsist.add("Engine");
+        trainConsist.add("Sleeper");
+        trainConsist.add("AC");
+        trainConsist.add("Cargo");
+        trainConsist.add("Guard");
 
-        System.out.println("Passenger Bogies after addition:");
-        System.out.println(passengerBogies);
+        System.out.println("Initial Train Consist:");
+        System.out.println(trainConsist);
 
-        passengerBogies.remove("AC Chair");
+        // Step 3: Insert Pantry Car at position 2
+        trainConsist.add(2, "Pantry");
 
-        System.out.println("Passenger Bogies after removal:");
-        System.out.println(passengerBogies);
+        System.out.println("\nAfter inserting Pantry Car at position 2:");
+        System.out.println(trainConsist);
 
-        System.out.println("Does Sleeper bogie exist? " + passengerBogies.contains("Sleeper"));
+        // Step 4: Remove first and last bogie
+        trainConsist.removeFirst(); // Removes Engine
+        trainConsist.removeLast();  // Removes Guard
 
-        System.out.println("Final Passenger Bogies List:");
-        System.out.println(passengerBogies);
+        // Step 5: Display final ordered consist
+        System.out.println("\nFinal Train Consist after removals:");
+        System.out.println(trainConsist);
     }
 }
